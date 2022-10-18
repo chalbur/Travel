@@ -1,55 +1,49 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-    String ctx = request.getContextPath();    //콘텍스트명 얻어오기.
-%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<script type="text/javascript" src="<%=ctx %>/SE2/js/HuskyEZCreator.js" charset="utf-8"></script>
-<script type="text/javascript">
-var oEditors = [];
-$(function(){
-      nhn.husky.EZCreator.createInIFrame({
-          oAppRef: oEditors,
-          elPlaceHolder: "ir1", //textarea에서 지정한 id와 일치해야 합니다. 
-          //SmartEditor2Skin.html 파일이 존재하는 경로
-          sSkinURI: "/smarteditorSample/SE2/SmartEditor2Skin.html",  
-          htParams : {
-              // 툴바 사용 여부 (true:사용/ false:사용하지 않음)
-              bUseToolbar : true,             
-              // 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음)
-              bUseVerticalResizer : true,     
-              // 모드 탭(Editor | HTML | TEXT) 사용 여부 (true:사용/ false:사용하지 않음)
-              bUseModeChanger : true,         
-              fOnBeforeUnload : function(){
-                   
-              }
-          }, 
-          fOnAppLoad : function(){
-              //기존 저장된 내용의 text 내용을 에디터상에 뿌려주고자 할때 사용
-              oEditors.getById["ir1"].exec("PASTE_HTML", ["기존 DB에 저장된 내용을 에디터에 적용할 문구"]);
-          },
-          fCreator: "createSEditor2"
-      });
-      
-      //저장버튼 클릭시 form 전송
-      $("#save").click(function(){
-          oEditors.getById["ir1"].exec("UPDATE_CONTENTS_FIELD", []);
-          $("#frm").submit();
-      });    
-});
- 
- 
- 
-</script>
+<title>메인홈</title>
+<link rel="stylesheet" href="css/home.css" type="text/css" />
+<style>
+
+</style>
 </head>
 <body>
-	<a href="">공지사항</a>
-	<a href="notice/Notice">자유게시판</a>
-	<a href="">여행후기게시판</a>
-	<a href="">질문게시판</a>
+	<div class="nav">
+		<div class="logo">
+			<a href="main"><img src="images/exlogo.png"></a>
+		</div>
+		<div class="nav_but">
+			<a href="">마이페이지</a>
+			<a href="">페이지2</a>
+			<a href="">페이지3</a>
+			<a href="">페이지4</a>
+		</div>
+	</div>
+	
+	<div class="wrap">
+		<div class="box1">box1</div>
+		<div class="line"></div>
+		<div class="category">
+			<ul>
+				<li><a href="notice/Notice" style="font-style: bold;">공지사항</a></li>
+				<li><a>여행후기게시판</a></li>
+				<li><a>관리자인증게시물</a></li>
+				<li><a>질문게시판</a></li>
+				<li><a>투표게시판</a></li>
+				<li><a>이벤트</a></li>
+				
+			</ul>
+		</div>
+		<div class="content">최근 글 목록</div>
+	</div>
+	
+	<div class="bottom">
+		<div class="bottom-1">분할1</div>
+		<div class="bottom-2">분할2</div>
+		<div class="bottom-3">분할3</div>
+	</div>
 </body>
 </html>

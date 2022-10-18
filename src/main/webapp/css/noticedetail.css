@@ -1,0 +1,8 @@
+@charset "EUC-KR";
+.table{
+	width: 70%;
+	margin: 0;
+	paddin: 0;
+	border:1;
+	box-sizing: content-box;
+}

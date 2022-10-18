@@ -1,0 +1,101 @@
+@charset "EUC-KR";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+.nav{
+	height : 70px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.nav .logo img{
+	width: 100px;
+	height: 70px;
+}
+
+.nav .nav_but a{
+	text-decoration: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	color:black;
+}
+
+.wrap{
+	width: 1000px;
+	margin: 0px auto;
+}
+
+.wrap .box1{
+	width: 100%;
+	height: 400px;
+	background-color: red;
+	float: left;
+}
+
+.wrap .category{
+	width: 18%;
+	height: 500px;
+	background-color: #66FF66;
+	text-align: center;
+	float: left;
+}
+.wrap .category ul{
+	font-family: 'Nanum Gothic', sans-serif; 
+	padding-left: 0px;
+	margin-right: 10px;
+	margin-left: 20px;
+	list-style: none;
+}
+.wrap .category ul li{
+	padding: 5px;
+	text-align: left;
+	margin-bottom: 5px;
+}
+.wrap .category ul li a{
+	text-decoration: none;
+	color: black;
+}
+
+.wrap .content{
+	width: 75%;
+	min-height: 700px;
+	float: left;
+	margin-left: 30px;
+	
+}
+
+.wrap .line{
+	width: 100%;
+	height: 3px;
+	background-color: #66FF66;
+	float: left;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.bottom{
+	width: 1000px;
+	height: 300px;
+	margin:0 auto;
+}
+.bottom-1{
+	width: 30%;
+	height: 300px;
+	float:left;
+	text-align: center;
+	background-color: red;
+}
+.bottom-2{
+	width: 30%;
+	height: 300px;
+	float:left;
+	text-align: center;
+	background-color: blue;
+}
+.bottom-3{
+	width: 30%;
+	height: 300px;
+	float:left;
+	text-align: center;
+	background-color: green;
+}
